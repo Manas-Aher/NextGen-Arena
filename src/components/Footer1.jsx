@@ -1,6 +1,5 @@
 import {FaGithub, FaTwitter, FaDiscord, FaTwitch} from "react-icons/fa";
 
-// --- Social links ---
 const socialLinks = [
     { href: "https://github.com", icon: <FaGithub /> },
     { href: "https://twitter.com", icon: <FaTwitter /> },
@@ -8,7 +7,6 @@ const socialLinks = [
     { href: "https://twitch.com", icon: <FaTwitch />}
 ];
 
-// --- Navigation links ---
 const navLinks = [
     { href: "#prologue", label: "Prologue" },
     { href: "#story", label: "Story" },
@@ -16,7 +14,6 @@ const navLinks = [
     { href: "#contact", label: "Contact" },
 ];  
 
-// --- Scroll to top (smooth) ---
 const scrollToTop = () => {
     const start = window.scrollY;
     const duration = 1800;
@@ -40,16 +37,12 @@ const scrollToTop = () => {
 const Footer = () => {
     return (
         <footer className="relative w-full bg-black text-blue-50 border-t border-hsla overflow-hidden">
-            {/* background radial glow */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(87,36,255,0.15),transparent_70%)] pointer-events-none"></div>
 
-            {/* subtle gradient glow at top */}
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-violet-300 via-blue-300 to-transparent opacity-70"></div>
 
-            {/* Main content */}
             <div className="mx-auto max-w-7xl px-6 py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8 relative z-10">
 
-                {/* Branding (clickable logo) */}
                 <div
                     onClick={scrollToTop}
                     className="flex flex-col items-center md:items-start cursor-pointer group"
@@ -62,7 +55,6 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Navigation */}
                 <nav className="flex flex-wrap justify-center gap-6 md:gap-10">
                     {navLinks.map((link) => (
                         <a key={link.href} href={link.href} className="nav-hover-btn">
@@ -71,7 +63,6 @@ const Footer = () => {
                     ))}
                 </nav>
 
-                {/* Social Links */}
                 <div className="flex gap-4 justify-center">
                     {socialLinks.map((link) => (
                         <a
@@ -87,7 +78,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom line with moving gradient */}
             <div className="relative border-t border-hsla py-4 text-center text-xs text-blue-75 overflow-hidden">
                 © {new Date().getFullYear()} Zentry — All rights reserved.
                 <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-violet-400 to-transparent animate-gradient-move"></div>
